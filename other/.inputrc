@@ -1,0 +1,13 @@
+set show-mode-in-prompt on
+set editing-mode vi
+set keymap vi-command
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+"\C-x\C-r": re-read-init-file
+set keymap vi-insert
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+"\C-x\C-r": re-read-init-file
+"\C-l": clear-screen
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
