@@ -7,7 +7,7 @@ set colorcolumn=81
 set ruler
 highlight ColorColumn ctermbg=0
 
-" don't expand tabs to spaces for XML templates
+" don't expand tabs to spaces for RuntimeSettings templates
 if expand('%:t') =~ '.*\.xml\.erb$'
     set expandtab!
     set tabstop=8
@@ -36,3 +36,15 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+
+" ruby syntax for Berksfile
+if @% == 'Berksfile'
+  set syntax=ruby
+endif
+
+" include pathogen stuff to make managing plugins easy
+execute pathogen#infect()
+
+" enable omnicompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
